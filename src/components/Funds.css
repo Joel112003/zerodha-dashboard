@@ -1,0 +1,136 @@
+/* Funds section */
+.funds-container {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+  }
+  
+  .funds-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 16px;
+  }
+  
+  .funds-header p {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Button styles */
+  .button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .button-green {
+    background: #4CAF50;
+    color: white;
+  }
+  
+  .button-green:hover {
+    background: #45a049;
+  }
+  
+  .button-blue {
+    background: #2196F3;
+    color: white;
+  }
+  
+  .button-blue:hover {
+    background: #1976D2;
+  }
+  
+  /* Grid layout */
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+  }
+  
+  /* Column styles */
+  .dashboard-column {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .section-title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+  
+  /* Data table styles */
+  .data-table {
+    width: 100%;
+  }
+  
+  .data-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .data-row:last-child {
+    border-bottom: none;
+  }
+  
+  .data-label {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .data-value {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .data-value-highlighted {
+    color: #2196F3;
+    font-weight: 600;
+  }
+  
+  .divider {
+    height: 1px;
+    background: #e0e0e0;
+    margin: 16px 0;
+  }
+  
+  /* Commodity section */
+  .commodity-section {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .commodity-section p {
+    color: #666;
+    margin-bottom: 16px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .dashboard-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .funds-header {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    .button {
+      text-align: center;
+    }
+  }

@@ -1,0 +1,139 @@
+.container#buy-window  {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  width: 320px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+.container#sell-window {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  width: 320px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.regular-order {
+  margin-bottom: 20px;
+}
+
+.inputs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+fieldset {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 8px;
+  flex: 1;
+}
+
+legend {
+  color: #666;
+  font-size: 14px;
+  padding: 0 5px;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Remove spinner buttons from number input */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.buttons > span {
+  color: #666;
+  font-size: 14px;
+}
+
+.buttons > div {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  flex: 1;
+  text-align: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-blue {
+  background: #2196f3;
+  color: white;
+}
+
+.btn-blue:hover {
+  background: #1976d2;
+}
+.btn-red {
+  background: red;
+  color: white;
+}
+
+.btn-red:hover {
+  background: red;
+}
+
+.btn-grey {
+  background: #f5f5f5;
+  color: #333;
+}
+
+.btn-grey:hover {
+  background: #e0e0e0;
+}
+
+/* Draggable styles */
+#buy-window[draggable="true"] {
+  cursor: move;
+  user-select: none;
+}
+
+#buy-window[draggable="true"]:active {
+  cursor: grabbing;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .container#buy-window {
+    width: 90%;
+    max-width: 320px;
+  }
+  
+  .inputs {
+    flex-direction: column;
+  }
+}

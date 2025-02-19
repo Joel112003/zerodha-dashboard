@@ -1,0 +1,87 @@
+.section {
+    background: #fff;
+    border-radius: 4px;
+    margin: 8px;
+    padding: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section span {
+    font-size: 15px;
+    color: #424242;
+  }
+  
+  .section p {
+    margin: 0;
+    padding: 4px 0;
+  }
+  
+  .data {
+    margin-top: 12px;
+  }
+  
+  .first {
+    padding: 8px 0;
+  }
+  
+  .first h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  .first small {
+    font-size: 14px;
+  }
+  
+  .second {
+    padding: 8px 0;
+  }
+  
+  .second p {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .second span {
+    font-weight: 500;
+  }
+  
+  .divider {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 4px 0;
+  }
+  
+  .profit {
+    color: #26a69a;
+  }
+  
+  .loss {
+    color: #ef5350;
+  }
+  
+  /* Loading state */
+  .loading {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .section {
+      margin: 4px;
+      padding: 12px;
+    }
+  
+    .first h3 {
+      font-size: 18px;
+    }
+  
+    .second p {
+      font-size: 13px;
+    }
+  }
