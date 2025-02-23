@@ -36,7 +36,7 @@ const Apps= () => {
       </main>
 
       <footer className="app-footer">
-        <p>&copy; 2025 My App. All rights reserved.</p>
+        <p>&copy; 20a25 My App. All rights reserved.</p>
       </footer>
     </div>
   );

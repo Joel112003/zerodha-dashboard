@@ -554,6 +554,61 @@ hr {
   margin-top: 6%;
 }
 
+
+/* ====== Keyframes for Animations ====== */
+
+/* 3D hover effect */
+@keyframes depthPop {
+  0% {
+    transform: perspective(500px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(500px) rotateX(5deg) rotateY(-5deg);
+  }
+  100% {
+    transform: perspective(500px) rotateX(0deg) rotateY(0deg);
+  }
+}
+
+/* Glowing neon effect */
+@keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(0, 255, 0, 1);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+  }
+}
+
+/* Rolling numbers effect */
+@keyframes rollNumbers {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Background shift effect */
+@keyframes bgShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ====== Styling the TopBar ====== */
 .topbar-container {
   width: 100%;
   height: 10vh;
@@ -562,58 +617,106 @@ hr {
   box-shadow: 0px 0px 4px 2px rgb(236, 235, 235);
   box-sizing: border-box;
   z-index: 9;
+  background-color: white;
+  background-size: 300% 300%;
+  animation: bgShift 5s infinite alternate ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
+/* Indices container */
 .indices-container {
   flex-basis: 32%;
   height: 100%;
   padding: 10px 20px;
-  border-right: 1px solid rgb(224, 224, 224);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-.nifty {
-  flex-basis: 40%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  z-index: -2;
-}
-
+/* Nifty & Sensex - Main Card */
+.nifty,
 .sensex {
   flex-basis: 40%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  transition: all 0.3s ease-in-out;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.05);
 }
 
-.nifty > *,
-.sensex > * {
-  margin-right: 8px;
+/* ====== Hover Effects ====== */
+.nifty:hover,
+.sensex:hover {
+  animation: depthPop 0.5s ease-in-out;
+  transform: perspective(500px) rotateX(5deg) rotateY(-5deg);
+  box-shadow: 0px 4px 12px rgba(0, 255, 0, 0.3);
+  border: 1px solid rgba(0, 255, 0, 0.4);
 }
 
+/* Index name */
 .index {
-  font-size: 0.8rem;
-  font-weight: 500;
+  font-size: 0.9rem;
+  font-weight: 600;
   text-transform: uppercase;
-  color: rgb(97, 97, 97);
+  color:black;
   white-space: nowrap;
+  transition: all 0.3s ease-in-out;
 }
 
+/* Numbers effect */
 .index-points {
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: rgb(223, 73, 73);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ff4757;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  animation: rollNumbers 0.6s ease-out;
 }
 
+/* Percentage */
 .percent {
-  font-size: 0.8rem;
-  font-weight: 400;
-  color: rgb(146, 146, 146);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #7bed9f;
 }
+
+/* Highlight numbers when updated */
+.index-points.changed,
+.percent.changed {
+  animation: glowPulse 1s infinite alternate ease-in-out;
+}
+
+/* Make numbers green if positive */
+.positive {
+  color: #2ed573;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .topbar-container {
+    height: 8vh;
+    padding: 5px;
+  }
+
+  .indices-container {
+    flex-basis: 50%;
+    padding: 5px 10px;
+  }
+
+  .index {
+    font-size: 0.75rem;
+  }
+
+  .index-points,
+  .percent {
+    font-size: 0.8rem;
+  }
+}
+
 
 /* sudo selectors */
 .index:hover {
