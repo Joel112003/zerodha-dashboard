@@ -30,7 +30,7 @@ const CustomMenu = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("user"); // Clear user data if stored
-    window.location.href = "https://zerodha-frontend-4gwg.onrender.com"; // Redirect to Zerodha official page
+    window.location.href = "https://main.d30egosej6ju9p.amplifyapp.com"; // Redirect to Zerodha official page
   };
 
   return (
