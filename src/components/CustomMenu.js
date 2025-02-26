@@ -36,7 +36,7 @@ const CustomMenu = () => {
   return (
     <div className="menu-container">
       <img
-        src="/Media/Images/zerodha.jpeg"
+        src="Media/Images/zerodha.jpeg"
         alt="No Available"
         style={{ width: "90px" }}
       />
